@@ -83,7 +83,8 @@ public class SecFragment extends Fragment implements RadioGroup.OnCheckedChangeL
         //添加碎片
         mList.add(new RecTopOneFragment());
         mList.add(new RecTopTwoFragment());
-        mList.add(new RecTopThreeFragment());
+        //mList.add(new RecTopThreeFragment());
+        mList.add(new ExposeBillFragment());
     }
 
 

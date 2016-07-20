@@ -3,7 +3,11 @@ package com.wowo.team.shoping.adapter;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +24,7 @@ import com.wowo.team.shoping.bean.RecOneBean;
 import com.wowo.team.shoping.bean.RecTwoBean;
 import com.wowo.team.shoping.fragment.RecTopOneFragment;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 /**
@@ -59,8 +64,16 @@ public class RecTopOneAdapter extends RecyclerView.Adapter<RecTopOneAdapter.RecT
     public void onBindViewHolder(RecTopOneHolder holder, int position) {
         ImageLoader.getInstance().displayImage(mDatas.get(position).photos, holder.iv_duobao, mImageOptions);
         holder.tv_duobao.setText(mDatas.get(position).name);
-        holder.tv_states.setText("夺宝进度 " + mDatas.get(position).states + "%");
-        holder.seekbar.setProgress(mDatas.get(position).states);
+        double c = (mDatas.get(position).usedcount * 1.0 / mDatas.get(position).allcount * 1.0) * 100;
+        DecimalFormat df = new DecimalFormat("0");//格式化小数
+        String s = df.format(c);
+        int ss = Integer.parseInt(df.format(c));
+        //Log.i("HAHAHA", "" + c);
+        SpannableString spannableString = new SpannableString("夺宝进度 " + s + "%");
+        spannableString.setSpan(new ForegroundColorSpan(Color.rgb(75,75,75)), 0, 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        holder.tv_jindu.setText(spannableString);
+
+        holder.seekbar.setProgress(ss);
 
 
     }
@@ -73,7 +86,7 @@ public class RecTopOneAdapter extends RecyclerView.Adapter<RecTopOneAdapter.RecT
     class RecTopOneHolder extends RecyclerView.ViewHolder {
         private ImageView iv_duobao;
         private TextView tv_duobao;
-        private TextView tv_states;
+        private TextView tv_jindu;
         private ProgressBar seekbar;
         private ImageView shop_cart;
 
@@ -81,7 +94,7 @@ public class RecTopOneAdapter extends RecyclerView.Adapter<RecTopOneAdapter.RecT
             super(itemView);
             iv_duobao = (ImageView) itemView.findViewById(R.id.iv_duobao);
             tv_duobao = (TextView) itemView.findViewById(R.id.tv_duobao);
-            tv_states = (TextView) itemView.findViewById(R.id.tv_states);
+            tv_jindu = (TextView) itemView.findViewById(R.id.tv_jindu);
             seekbar = (ProgressBar) itemView.findViewById(R.id.seekbar);
             shop_cart = (ImageView) itemView.findViewById(R.id.shop_cart);
         }

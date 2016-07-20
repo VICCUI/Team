@@ -16,5 +16,7 @@ public class RecOneBean {
         public String photos;//图片
         public String name;//名字
         public int states;
+        public int usedcount;
+        public int allcount;
     }
 }

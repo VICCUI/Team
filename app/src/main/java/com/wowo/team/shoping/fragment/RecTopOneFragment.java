@@ -3,6 +3,7 @@ package com.wowo.team.shoping.fragment;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupWindow;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -40,7 +42,6 @@ public class RecTopOneFragment extends Fragment implements RadioGroup.OnCheckedC
     private PopupWindow popupWindow;
 
 
-    String titles[] = {"全部", "数码电器", "电脑", "时尚家居", "钟表", "运动户外", "汽车用品", "个人护理", "食品", "珠宝", "其他商品"};
 
     @Nullable
     @Override
@@ -76,7 +77,6 @@ public class RecTopOneFragment extends Fragment implements RadioGroup.OnCheckedC
         popupWindow = new PopupWindow();
 
 
-
     }
 
     @Override
@@ -85,7 +85,8 @@ public class RecTopOneFragment extends Fragment implements RadioGroup.OnCheckedC
         switch (checked) {
             case R.id.rb_quanbu:
                 showPopuwindows();
-                // Toast.makeText(getContext(), "这里应该有个popuwindows", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(), "这里应该有个popuwindows", Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.rb_renqi:
                 popupWindow.dismiss();
@@ -106,7 +107,6 @@ public class RecTopOneFragment extends Fragment implements RadioGroup.OnCheckedC
 
     private void showPopuwindows() {
         if (!popupWindow.isShowing()) {
-
             popupWindow.setWidth(RecyclerView.LayoutParams.MATCH_PARENT);
             popupWindow.setHeight(600);
             popupWindow.setOutsideTouchable(true);
@@ -116,11 +116,8 @@ public class RecTopOneFragment extends Fragment implements RadioGroup.OnCheckedC
             popupWindow.showAtLocation(
                     rg_duobao,
                     Gravity.TOP | Gravity.CENTER_VERTICAL, 0, 220);
-
-
-        } else if (popupWindow.isShowing()) {
+        } else if (popupWindow.isShowing() && popupWindow != null) {
             popupWindow.dismiss();
-
         }
     }
 

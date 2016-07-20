@@ -38,7 +38,7 @@
 
             <RadioButton
                 style="@style/Pop"
-                android:text="运动户外"/>
+                android:text="运动户外" />
 
             <RadioButton
                 style="@style/Pop"
@@ -63,14 +63,13 @@
             <RadioButton
                 style="@style/Pop"
                 android:text="其他" />
-
         </RadioGroup>
-
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:id="@+id/lin"
         android:background="#F00"></LinearLayout>
 </LinearLayout>
