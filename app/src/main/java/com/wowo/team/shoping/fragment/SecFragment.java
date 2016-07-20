@@ -93,11 +93,20 @@ public class SecFragment extends Fragment implements RadioGroup.OnCheckedChangeL
     }
 
     @Override
-    public void onCheckedChanged(RadioGroup radioGroup, int position) {
-        int i = position - 2131492954;
-        rec_vp.setCurrentItem(i);
+    public void onCheckedChanged(RadioGroup radioGroup, int checked) {
+        switch (checked){
+            case R.id.rb_duobao:
+                rec_vp.setCurrentItem(0);
+                break;
+            case R.id.rb_jiexiao:
+                rec_vp.setCurrentItem(1);
+                break;
+            case R.id.rb_shaidan:
+                rec_vp.setCurrentItem(2);
+                break;
+        }
+       // rec_vp.setCurrentItem(i);
 
-        //Log.i("TTT",""+i);
 
     }
 

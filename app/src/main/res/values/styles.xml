@@ -30,6 +30,7 @@
         <item name="android:gravity">center</item>
         <item name="android:textSize">16dp</item>
     </style>
+
     <style name="rec_mid">
         <!--夺宝界面1的三个button-->
         <item name="android:layout_width">0dp</item>
@@ -39,10 +40,19 @@
         <item name="android:gravity">center</item>
 
     </style>
+
     <style name="rec_view">
         <!--线-->
         <item name="android:layout_width">0.8dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">#2B2B2B</item>
+    </style>
+
+    <style name="Pop">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:button">@null</item>
     </style>
 </resources>

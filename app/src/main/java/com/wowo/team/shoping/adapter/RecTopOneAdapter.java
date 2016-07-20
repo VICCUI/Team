@@ -62,6 +62,7 @@ public class RecTopOneAdapter extends RecyclerView.Adapter<RecTopOneAdapter.RecT
         holder.tv_states.setText("夺宝进度 " + mDatas.get(position).states + "%");
         holder.seekbar.setProgress(mDatas.get(position).states);
 
+
     }
 
     @Override
@@ -74,6 +75,7 @@ public class RecTopOneAdapter extends RecyclerView.Adapter<RecTopOneAdapter.RecT
         private TextView tv_duobao;
         private TextView tv_states;
         private ProgressBar seekbar;
+        private ImageView shop_cart;
 
         public RecTopOneHolder(View itemView) {
             super(itemView);
@@ -81,6 +83,7 @@ public class RecTopOneAdapter extends RecyclerView.Adapter<RecTopOneAdapter.RecT
             tv_duobao = (TextView) itemView.findViewById(R.id.tv_duobao);
             tv_states = (TextView) itemView.findViewById(R.id.tv_states);
             seekbar = (ProgressBar) itemView.findViewById(R.id.seekbar);
+            shop_cart = (ImageView) itemView.findViewById(R.id.shop_cart);
         }
     }
 }

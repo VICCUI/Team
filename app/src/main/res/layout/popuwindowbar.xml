@@ -4,15 +4,73 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <TextView
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="#F00" />
+        android:background="#006677">
 
-    <TextView
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RadioButton
+                style="@style/Pop"
+                android:text="全部" />
+
+            <RadioButton
+                style="@style/Pop"
+                android:text="数码电器" />
+
+            <RadioButton
+                style="@style/Pop"
+                android:text="电脑" />
+
+
+            <RadioButton
+                style="@style/Pop"
+                android:text="时尚家居" />
+
+            <RadioButton
+                style="@style/Pop"
+                android:text="钟表" />
+
+            <RadioButton
+                style="@style/Pop"
+                android:text="运动户外"/>
+
+            <RadioButton
+                style="@style/Pop"
+                android:text="汽车用品" />
+
+            <RadioButton
+                style="@style/Pop"
+                android:text="个人用品" />
+
+            <RadioButton
+                style="@style/Pop"
+                android:text="护理" />
+
+            <RadioButton
+                style="@style/Pop"
+                android:text="食品" />
+
+            <RadioButton
+                style="@style/Pop"
+                android:text="珠宝" />
+
+            <RadioButton
+                style="@style/Pop"
+                android:text="其他" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="#0F0" />
+        android:background="#F00"></LinearLayout>
 </LinearLayout>
