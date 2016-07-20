@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rg_duobao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_quanbu"
+            style="@style/rec_mid"
+            android:textColor="@drawable/rec_one_color_selevtor"
+            android:text="全部" />
+
+        <View style="@style/rec_view" />
+
+        <RadioButton
+            android:id="@+id/rb_renqi"
+            style="@style/rec_mid"
+            android:textColor="@drawable/rec_one_color_selevtor"
+            android:text="人气" />
+
+        <View style="@style/rec_view" />
+
+        <RadioButton
+            android:id="@+id/rb_shengyu"
+            style="@style/rec_mid"
+            android:textColor="@drawable/rec_one_color_selevtor"
+            android:text="剩余" />
+
+
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="#2B2B2B" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_duobao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

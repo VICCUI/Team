@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Shoping</string>
+    <string name="home">首页</string>
+    <string name="sec">夺宝</string>
+    <string name="shopcart">购物车</string>
+    <string name="person">我的</string>
+    <string name="homefind">发现</string>
+</resources>

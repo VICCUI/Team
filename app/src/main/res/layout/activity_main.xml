@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/content_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mainRadioGroup" />
+
+    <RadioGroup
+        android:background="#ededed"
+        android:id="@+id/mainRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_1"
+            android:checked="true"
+            style="@style/radoibuttonStyle"
+            android:drawableTop="@drawable/home_selector"
+            android:text="@string/home" />
+
+        <RadioButton
+            android:id="@+id/rb_2"
+            style="@style/radoibuttonStyle"
+            android:drawableTop="@drawable/sec_selector"
+            android:text="@string/sec" />
+
+        <RadioButton
+            android:id="@+id/rb_3"
+            style="@style/radoibuttonStyle"
+            android:drawableTop="@drawable/homefind_selector"
+            android:text="@string/homefind" />
+
+        <RadioButton
+            android:id="@+id/rb_4"
+            style="@style/radoibuttonStyle"
+            android:drawableTop="@drawable/shopcart_selector"
+            android:text="@string/shopcart" />
+
+        <RadioButton
+            android:id="@+id/rb_5"
+            style="@style/radoibuttonStyle"
+            android:drawableTop="@drawable/person_selector"
+            android:text="@string/person" />
+
+    </RadioGroup>
+</RelativeLayout>
